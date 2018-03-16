@@ -1,9 +1,10 @@
-# Simple React Application with Redux
+# Simple React / Redux application
 
 ## Setup
 
 ```bash
-git clone
+git clone https://github.com/sfletche/simple-redux-app.git
 cd simple-redux-app
+npm install
 npm start
 ```
