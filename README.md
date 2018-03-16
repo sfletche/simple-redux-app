@@ -1,6 +1,6 @@
 # Simple React / Redux application
 
-## Setup
+## Getting Started
 
 ```bash
 git clone https://github.com/sfletche/simple-redux-app.git
