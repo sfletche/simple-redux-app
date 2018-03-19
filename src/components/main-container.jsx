@@ -6,7 +6,7 @@ import {
   clearTitle,
 } from '../actions/actions';
 
-function ClearButton({ clearTitle }) {
+function getClearButton(clearTitle) {
   return (
     <button onClick={clearTitle}>
       Clear Title
@@ -14,7 +14,7 @@ function ClearButton({ clearTitle }) {
   );
 }
 
-function SetButton({ setTitle, title }) {
+function getSetButton(setTitle, title) {
   return (
     <button onClick={() => setTitle(title)}>
       Set Title
@@ -26,8 +26,7 @@ function MainContainer({ title, setTitle, clearTitle }) {
   return (
     <div>
       <h1>{title || 'Default Title'}</h1>
-      {title && <ClearButton clearTitle={clearTitle} />}
-      {!title && <SetButton setTitle={setTitle} title="New Title!" />}
+      {title ? getClearButton(clearTitle) : getSetButton(setTitle, "New Title!")}
     </div>
   );
 }
